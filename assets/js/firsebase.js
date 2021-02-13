@@ -65,6 +65,7 @@ function onSignInSubmit() {
 
     });
 
+
     $('#getcode').on('click', function () {
         var phoneNo = $('#number').val();
         if(!phoneNo) return toastr["error"]("please number phone")
@@ -76,9 +77,7 @@ function onSignInSubmit() {
             window.confirmationResult=confirmationResult;
             coderesult=confirmationResult;
         }).catch(function (error) {
-            if(error.code == "auth/invalid-phone-number" || error.code == "auth/captcha-check-failed" ){
-                return toastr["error"]("error : number phone or captcha")
-            }
+            console.log(error);
         });
     });
 }
