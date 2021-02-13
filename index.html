@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPT-FIRRBASE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+</head>
+<body>
+    <section class="validOTPForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h4 class="text-center">
+                                Account verification
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="phone_no">Phone Number</label>
+                                    <input type="tel"  pattern="[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}" required class="form-control" name="phone_no" id="number" placeholder="+84779330932">
+                                </div>
+                                <div id="recaptcha-container"></div>
+                                <a href="#" id="getcode" class="btn btn-dark btn-sm">Get Code</a>
+
+                                <div class="form-group mt-4">
+                                    <input type="text" name="" id="codeToVerify" name="getcode" class="form-control" placeholder="Enter Code">
+                                </div>
+
+                                <a href="#" class="btn btn-dark btn-sm btn-block" id="verifPhNum">Verify Phone No</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.6/firebase.js" integrity="sha512-1/GJTP5to7UR8cdPiBnVS4xf4FE/mZcPCmUjljHUO7GUgJs17Ju5huS1dB4E57P45QVLjyK4IP8ZthWo0Qwmeg==" crossorigin="anonymous"></script>
+    <script src="assets/js/firsebase.js"></script>
+</body>
+</html>
